@@ -1,0 +1,36 @@
+application:
+  spring:
+    output:
+      ansi:
+        enabled: ALWAYS
+    profiles:
+      active: dev
+spring:
+  application:
+    name: osrr-reviews-rating-service
+  profiles:
+    active:
+      on-profile: dev
+---
+osrr:
+  features:
+    ehCacheEnabled: false
+    updateAvgRatingEnabled: true
+    slidingLogicEnabled: false
+    stopWatchLogEnabled: true
+---
+ehCacheConfigs:
+  findByUpcCacheSize: 5004
+  findByUpc_TimeToLive: 21600
+  findByBannerIdAndUpcsCacheSize: 65000
+  findByBannerIdAndUpcs_TimeToLive: 21600
+  findByBannerIdAndBpnsCacheSize: 65000
+  findByBannerIdAndBpns_TimeToLive: 21600
+  findByTransactionIdsCacheSize: 1500
+  findByTransactionIds_TimeToLive: 21600
+  findCustomerProductRatingsCacheSize: 1500
+  findCustomerProductRatings_TimeToLive: 21600
+  findByIdCacheSize: 1500
+  findById_TimeToLive: 21600
+  timeToIdle: 900
+  cache-refresh-interval: 7200000
