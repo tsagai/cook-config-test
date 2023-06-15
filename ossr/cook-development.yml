@@ -15,7 +15,7 @@ spring:
 osrr:
   features:
     ehCacheEnabled: false
-    updateAvgRatingEnabled: true
+    updateAvgRatingEnabled: false
     slidingLogicEnabled: false
     stopWatchLogEnabled: true
 ---
