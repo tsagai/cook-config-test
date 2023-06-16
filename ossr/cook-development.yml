@@ -15,12 +15,12 @@ spring:
 osrr:
   features:
     ehCacheEnabled: false
-    updateAvgRatingEnabled: false
+    updateAvgRatingEnabled: true
     slidingLogicEnabled: false
     stopWatchLogEnabled: true
 ---
 ehCacheConfigs:
-  findByUpcCacheSize: 4004
+  findByUpcCacheSize: 9004
   findByUpc_TimeToLive: 21600
   findByBannerIdAndUpcsCacheSize: 65000
   findByBannerIdAndUpcs_TimeToLive: 21600
